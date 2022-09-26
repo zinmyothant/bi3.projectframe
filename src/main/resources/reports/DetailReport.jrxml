@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.19.1.final using JasperReports Library version 6.19.1-867c00bf88cd4d784d404379d6c05e1b419e8a4c  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ticket_order_report" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="73165600-6a6b-4828-bae9-9715e9a960e3">
+	<property name="com.jaspersoft.studio.unit." value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageHeight" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.topMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.bottomMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.leftMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.rightMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnSpacing" value="pixel"/>
+	<style name="Table_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<subDataset name="ticketOrderingDataset" uuid="be48e318-c7ba-4c4a-8b76-ca8e81d8fe7e">
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+		<parameter name="id" class="java.lang.Long"/>
+		<parameter name="name" class="java.lang.String"/>
+		<parameter name="phoneNumber" class="java.lang.String"/>
+		<parameter name="address" class="java.lang.String"/>
+		<queryString>
+			<![CDATA[]]>
+		</queryString>
+	</subDataset>
+	<parameter name="totalCount" class="java.lang.Double"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="address" class="java.lang.String">
+		<fieldDescription><![CDATA[address]]></fieldDescription>
+	</field>
+	<field name="phoneNumber" class="java.lang.String">
+		<fieldDescription><![CDATA[phoneNumber]]></fieldDescription>
+	</field>
+	<field name="name" class="java.lang.String">
+		<fieldDescription><![CDATA[name]]></fieldDescription>
+	</field>
+	<field name="id" class="java.lang.Long">
+		<fieldDescription><![CDATA[id]]></fieldDescription>
+	</field>
+	<background>
+		<band height="80" splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="113" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="52" width="800" height="18" uuid="249b5564-bd03-4c10-881e-67afd766cf8f"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Serif" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Student Information]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="295" y="94" width="100" height="16" backcolor="#918D8D" uuid="5d372722-74e2-494e-bde4-ddd5f0beca22">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Serif" size="11"/>
+				</textElement>
+				<text><![CDATA[Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="395" y="94" width="90" height="16" backcolor="#918D8D" uuid="97cd4d13-75d0-4db0-b01c-23f23b7dff67"/>
+				<box>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Serif" size="11"/>
+				</textElement>
+				<text><![CDATA[Phone Number]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="485" y="94" width="115" height="16" backcolor="#918D8D" uuid="f14620b2-b395-45a3-9c36-08324e8c9c54"/>
+				<box>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Serif" size="11"/>
+				</textElement>
+				<text><![CDATA[Address]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="215" y="94" width="80" height="16" backcolor="#918D8D" uuid="b8ee80e4-5aef-4506-909b-8117358b0889"/>
+				<box>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Serif" size="11"/>
+				</textElement>
+				<text><![CDATA[ID]]></text>
+			</staticText>
+		</band>
+	</title>
+	<detail>
+		<band height="23" splitType="Stretch">
+			<componentElement>
+				<reportElement x="215" y="-3" width="385" height="23" uuid="f5743f95-5336-451b-9e02-3ff29db7b210">
+					<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.VerticalRowLayout"/>
+					<property name="com.jaspersoft.studio.table.style.table_header" value="Table_TH"/>
+					<property name="com.jaspersoft.studio.table.style.column_header" value="Table_CH"/>
+					<property name="com.jaspersoft.studio.table.style.detail" value="Table_TD"/>
+				</reportElement>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd" whenNoDataType="Blank">
+					<datasetRun subDataset="ticketOrderingDataset" uuid="059fd885-87aa-4d3c-bb8c-50b12cbe6c1f">
+						<datasetParameter name="id">
+							<datasetParameterExpression><![CDATA[$F{id}]]></datasetParameterExpression>
+						</datasetParameter>
+						<datasetParameter name="name">
+							<datasetParameterExpression><![CDATA[$F{name}]]></datasetParameterExpression>
+						</datasetParameter>
+						<datasetParameter name="phoneNumber">
+							<datasetParameterExpression><![CDATA[$F{phoneNumber}]]></datasetParameterExpression>
+						</datasetParameter>
+						<datasetParameter name="address">
+							<datasetParameterExpression><![CDATA[$F{address}]]></datasetParameterExpression>
+						</datasetParameter>
+						<dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.JREmptyDataSource()]]></dataSourceExpression>
+					</datasetRun>
+					<jr:column width="80" uuid="5807fcc7-c3b4-4245-9731-1e26a61201ff">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column1"/>
+						<jr:detailCell style="Table_TD" height="23">
+							<textField isBlankWhenNull="true">
+								<reportElement x="0" y="0" width="80" height="23" isRemoveLineWhenBlank="true" uuid="2a0a51ca-6cab-4039-a7ff-8d71ff5a30b4"/>
+								<textElement markup="none">
+									<font fontName="Zawgyi-One" size="11"/>
+									<paragraph leftIndent="2" rightIndent="2"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$P{id}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="100" uuid="74780a61-052c-4926-b0ea-a58b1d424972">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column2"/>
+						<jr:detailCell style="Table_TD" height="23">
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							<textField>
+								<reportElement x="0" y="0" width="100" height="23" uuid="216b6df7-b7cf-4949-9d47-1dbf67b418b1"/>
+								<textFieldExpression><![CDATA[$P{name}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="90" uuid="4b5a7ea6-e6d9-4a80-a945-54875fa947e2">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column3"/>
+						<jr:detailCell style="Table_TD" height="23">
+							<textField isBlankWhenNull="true">
+								<reportElement x="0" y="0" width="90" height="23" uuid="5b0db25a-628d-4a94-9efb-0f35b085910a"/>
+								<textElement markup="none">
+									<font fontName="Zawgyi-One" size="11"/>
+									<paragraph firstLineIndent="2" leftIndent="2"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$P{phoneNumber}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="115" uuid="d9220679-5c81-4b9a-a1eb-f3575c454535">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column4"/>
+						<jr:detailCell style="Table_TD" height="23">
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							<textField isBlankWhenNull="true">
+								<reportElement x="0" y="0" width="115" height="23" uuid="3830bbd0-96f3-4902-a53e-109cdc5a4d83"/>
+								<textElement markup="none">
+									<font fontName="Zawgyi-One" size="11"/>
+									<paragraph firstLineIndent="2" leftIndent="2"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$P{address}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+		</band>
+	</detail>
+	<summary>
+		<band height="50"/>
+	</summary>
+</jasperReport>

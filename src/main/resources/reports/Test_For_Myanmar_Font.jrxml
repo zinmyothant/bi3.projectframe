@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.19.1.final using JasperReports Library version 6.19.1-867c00bf88cd4d784d404379d6c05e1b419e8a4c  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Test_For_Myanmar_Font" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="34a986a8-067f-4419-b3e1-2ce9dc3245ac">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="OracleSql.jrdax"/>
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<queryString>
+		<![CDATA[select * from tran]]>
+	</queryString>
+	<field name="TRANDATE" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="TRANDATE"/>
+		<property name="com.jaspersoft.studio.field.label" value="TRANDATE"/>
+	</field>
+	<field name="TRANAMOUNT" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="TRANAMOUNT"/>
+		<property name="com.jaspersoft.studio.field.label" value="TRANAMOUNT"/>
+	</field>
+	<field name="ID" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="ID"/>
+		<property name="com.jaspersoft.studio.field.label" value="ID"/>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="-20" y="0" width="590" height="79" uuid="ce4fe9a7-24bf-4b89-9bac-2cd5991641fb"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Pyidaungsu" size="18"/>
+				</textElement>
+				<text><![CDATA[မြန်မာနိုင်ငံခြား ကုန်သွယ်မှုဘဏ်]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="36" splitType="Stretch">
+			<staticText>
+				<reportElement x="-20" y="2" width="590" height="30" uuid="303bb286-3fc8-40ae-acb8-4c8aaad753d4"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Pyidaungsu"/>
+				</textElement>
+				<text><![CDATA[အကြောင်းအရာ :  မြန်မာဖောင့် စမ်းသပ်ခြင်း]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="32" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="185" height="30" uuid="5a912c4f-0699-4b93-8e71-c124373851b0">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="ea264509-6e83-40ac-830f-8461f2ce9130"/>
+				</reportElement>
+				<text><![CDATA[TRANDATE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="185" y="0" width="185" height="30" uuid="e3b552b0-eb84-42a2-b4f1-c3d597f74010">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="5580e52b-a98d-42af-b655-933c3f3956f6"/>
+				</reportElement>
+				<text><![CDATA[TRANAMOUNT]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="370" y="0" width="185" height="30" uuid="57b47fc9-babb-427a-b621-c41c5c189c10">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="c33dbc05-86b0-46fc-bd5e-d16804e52724"/>
+				</reportElement>
+				<text><![CDATA[ID]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="30" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="185" height="30" uuid="64a71347-c29a-4d0a-8a2a-117dcd0cc5f8">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="ea264509-6e83-40ac-830f-8461f2ce9130"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{TRANDATE}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="185" y="0" width="185" height="30" uuid="7921f514-7a4e-42ee-bd7e-46ac5091780b">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="5580e52b-a98d-42af-b655-933c3f3956f6"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{TRANAMOUNT}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="370" y="0" width="185" height="30" uuid="6c993ba4-63da-40cf-ab60-8641412351c0">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="c33dbc05-86b0-46fc-bd5e-d16804e52724"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{ID}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="37" splitType="Stretch">
+			<staticText>
+				<reportElement x="-20" y="6" width="590" height="30" uuid="4da4c0d2-8bca-4bbf-b97b-c571a60432e8"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Pyidaungsu"/>
+				</textElement>
+				<text><![CDATA[အဆင်ပြေပါသည်]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

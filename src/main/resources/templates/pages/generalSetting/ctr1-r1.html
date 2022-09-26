@@ -1,0 +1,115 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<title>Student</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<!-- DataTables -->
+<link rel="stylesheet" type="text/css"
+	th:href="@{/css/dataTables.bootstrap4.css}" />
+
+</head>
+
+<body style="padding-right: 0px;">
+	<header th:insert="fragment/navigation.html :: header"></header>
+	<div class="wrapper">
+		<section class="content">
+			<div class="container-fluid">
+
+				<!-- /.col -->
+				<div class="col-12">
+					<div class="card card-primary">
+						<div class="card-header">
+							<div class="row mb-2">
+								<div class="col-sm-6">
+									<h5>Counter1 Report1</h5>
+								</div>
+								<div class="col-sm-6 label-alignment">
+									<a href="student">Reports>>Counter1</a>
+								</div>
+							</div>
+						</div>
+
+						<div class="card-body">
+							<form th:action="@{/generalSetting/student/report}" method="POST" target="_blank">
+								<h6>Prototype-1</h6>
+								<div class="form-row">
+									<div class="form-group col-md-4">
+										<label for="start_date">START DATE</label> <input type="date"
+											class="form-control" id="start_date" name="start_date">
+									</div>
+									<div class="form-group col-md-4">
+										<label for="end_date">END DATE</label> <input type="date"
+											class="form-control" id="end_date" name="end_date">
+									</div>
+									<div class="form-group col-md-2">
+										<label for="inputState">FORMAT</label> <select id="inputState"
+											class="form-control" name="format">
+											<option value="pdf">PDF</option>
+											<option value="excel">XLS</option>
+										</select>
+									</div>
+									<div class="form-group col-md-1">
+										<label for="button">&nbsp;</label> <input type="submit"
+											value="Generate" class="btn btn-primary form-control"
+											id="button">
+									</div>
+
+								</div>
+
+
+							</form>
+							<button class="btn btn-primary" onclick="history.back();">Back</button>
+							<!--prototype-2-->
+							<form th:action="@{/generalSetting/student/report}" method="POST"
+								class="mt-5" target="_blank">
+								<h6>Portotype-2</h6>
+								<div class="form-group col-md-4">
+									<label for="start_date">START DATE</label> <input type="date"
+										class="form-control" id="start_date" name="start_date">
+								</div>
+								<div class="form-group col-md-4">
+									<label for="end_date">END DATE</label> <input type="date"
+										class="form-control" id="end_date" name="end_date">
+								</div>
+
+
+								<button type="submit" value="pdf" class="btn btn-primary ml-2"
+									name="format">PDF</button>
+
+								<button type="submit" value="excel" class="btn btn-primary ml-2"
+									name="format">Excel</button>
+
+
+
+							</form>
+							<!--end prototype-2-->
+							<button class="btn btn-primary float-right"
+								onclick="history.back();">Back</button>
+						</div>
+						<!-- /.card-body -->
+					</div>
+					<!-- /.card -->
+				</div>
+				<!-- /.col -->
+
+			</div>
+			<!-- /.container-fluid -->
+		</section>
+
+	</div>
+
+	<script type="text/javascript" th:src="@{/js/jquery.dataTables.js}"></script>
+	<script type="text/javascript" th:src="@{/js/dataTables.bootstrap4.js}"></script>
+	<script type="text/javascript" th:src="@{/js/dateFormat.js}"></script>
+	<script type="text/javascript" th:src="@{/js/jquery.validate.js}"></script>
+	<script type="text/javascript" th:src="@{/js/lodash.js}"></script>
+	<script type="text/javascript" th:src="@{/js/util.js}"></script>
+	<script type="text/javascript"
+		th:src="@{/js/generalSetting/student.js}"></script>
+
+
+</body>
+
+</html>

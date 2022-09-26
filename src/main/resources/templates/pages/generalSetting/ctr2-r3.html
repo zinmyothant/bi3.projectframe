@@ -1,0 +1,60 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<title>Student</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<!-- DataTables -->
+	<link rel="stylesheet" type="text/css" th:href="@{/css/dataTables.bootstrap4.css}" />
+
+</head>
+
+<body style="padding-right: 0px;">
+	<header th:insert="fragment/navigation.html :: header"></header>
+	<div class="wrapper">
+		<section class="content">
+			<div class="container-fluid">
+
+				<!-- /.col -->
+				<div class="col-12">
+					<div class="card card-primary">
+						<div class="card-header">
+							<div class="row mb-2">
+								<div class="col-sm-6">
+									<h5>Counter2 Report3</h5>
+								</div>
+								<div class="col-sm-6 label-alignment">
+									<a href="student">Reports>>Counter2</a>
+								</div>
+							</div>
+						</div>
+
+						<div class="card-body">
+							<button class="btn btn-primary">Generate</button>
+							<button class="btn btn-primary" onclick="history.back();">Back</button>
+						</div>
+						<!-- /.card-body -->
+					</div>
+					<!-- /.card -->
+				</div>
+				<!-- /.col -->
+
+			</div>
+			<!-- /.container-fluid -->
+		</section>
+
+	</div>
+
+	<script type="text/javascript" th:src="@{/js/jquery.dataTables.js}"></script>
+	<script type="text/javascript" th:src="@{/js/dataTables.bootstrap4.js}"></script>
+	<script type="text/javascript" th:src="@{/js/dateFormat.js}"></script>
+	<script type="text/javascript" th:src="@{/js/jquery.validate.js}"></script>
+	<script type="text/javascript" th:src="@{/js/lodash.js}"></script>
+	<script type="text/javascript" th:src="@{/js/util.js}"></script>
+	<script type="text/javascript" th:src="@{/js/generalSetting/student.js}"></script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,183 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<title>Student</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<!-- DataTables -->
+ <script type="text/javascript" th:src="@{/js/bootstrap.js}"></script>
+<link rel="stylesheet" th:href="@{/css/bootstrap.css} " />
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<link rel="stylesheet"
+	href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+</head>
+<style>
+
+  	.hoverTable{
+		width:100%; 
+		border-collapse:collapse; 
+	}
+	.hoverTable td{ 
+		padding:7px; border:#4e95f4 1px solid;
+	}
+	/* Define the default color for all the table rows */
+	.hoverTable tr{
+		background: #b8d1f3;
+	}
+	/* Define the hover highlight color for the table row */
+    .hoverTable tr:hover {
+          background-color: #000080;
+    }
+
+#project-label {
+display: block;
+font-weight: bold;
+margin-bottom: 1em;
+}
+#project-icon {
+float: left;
+height: 32px;
+width: 32px;
+}
+#project-description {
+margin: 0;
+padding: 0;
+}
+</style>
+
+<body style="padding-right: 0px;">
+	<header th:insert="fragment/navigation.html :: header"></header> 
+
+
+	<div class="wrapper">
+		<section class="content">
+			<div class="container-fluid">
+
+				<!-- /.col -->
+				<div class="col-12">
+					<div class="card card-primary">
+						<div class="card-header">
+							<div class="row mb-2">
+								<div class="col-sm-6">
+									<h5>Customize Report Tool</h5>
+								</div>
+								<div class="col-sm-6 label-alignment">
+									<a th:href="@{/generalSetting/student}">Reports>>CIS</a>
+								</div>
+							</div>
+						</div>
+
+						<div class="card-body">
+						
+						
+						<div id="project-label">Select an account (type "z" for a start):</div>
+	<input type="text" id="project-description" >
+
+	<!-- <p id="project-description"></p> -->
+	<button type="button" class="btn btn-primary" data-bs-toggle="modal"
+		data-bs-target="#exampleModal">Search</button>
+
+	<!-- Modal -->
+	<!-- <form th:action="@{/Home/search}" th:object=${student} method="post"> -->
+	<div class="modal fade" id="exampleModal" tabindex="-1"
+		aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal"
+						aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+
+					<div class="form-group">
+						<div class="modal-body ui-front">
+							<label for="name" class="col-form-label">Name:</label><input
+								name="project" id="project" class="form-control"
+								autocomplete="name" />
+						</div>
+					</div>
+					<div id="demo" class="mt-5"></div>
+					<!--  <div class="modal-body ui-front">
+       <input th:field="*{name}" name="p_name" id="p_name" oninput="getRequest()"
+				class="form-control" autocomplete="name" />
+      </div> -->
+
+				</div>
+				<div class="modal-footer"></div>
+							<!-- /.card-body -->
+						</div>
+
+						<!-- /.card -->
+					</div>
+					<!-- /.card -->
+				</div>
+				<!-- /.col -->
+
+			</div>
+			<!-- /.container-fluid -->
+		</section>
+
+	</div>
+
+
+	<script type="text/javascript" th:src="@{/js/dateFormat.js}"></script>
+	
+
+<script>
+	
+	
+
+		
+		
+		$(function() {
+			console.log("asd");
+			//overriding jquery-ui.autocomplete .js functions
+			$.ui.autocomplete.prototype._renderMenu = function(ul, items) {
+			  var self = this;
+			  //table definitions
+			  ul.append("<table class='hoverTable'><thead><tr><th>ID&nbsp;&nbsp;&nbsp;</th><th>Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th><th>ACC&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th></tr></thead><tbody></tbody></table>");
+			  $.each( items, function( index, item ) {
+			    self._renderItemData(ul, ul.find("table tbody"), item );
+			  });
+			};
+			$.ui.autocomplete.prototype._renderItemData = function(ul,table, item) {
+			  return this._renderItem( table, item ).data( "ui-autocomplete-item", item );
+			};
+			$.ui.autocomplete.prototype._renderItem = function(table, item) {
+			  return $( "<tr class='ui-menu-item' role='presentation'></tr>" )
+			    //.data( "item.autocomplete", item )
+			    .append( "<td >"+item.id+"</td>"+"<td>"+item.name+"</td>"+"<td id='testing' onclick='choose()'>"+item.nrc+"</td>" )
+			    .appendTo( table );
+			};
+			//random json values
+			
+			$( "#project" ).autocomplete({
+				minLength: 1,
+				source: "searchname",
+			    
+				focus: function( event, ui ) {
+					console.log(ui.item.nrc);
+			        $( "#project" ).val( ui.item.name );
+					$( "#project-id" ).val( ui.item.id );
+					$( "#project-description" ).val( ui.item.nrc );
+					return false;
+				}//you can write for select too
+			    /*select:*/
+			})
+			});
+
+function choose(){
+		
+	
+		
+		$("#exampleModal").modal('hide')
+		
+	}
+	</script>
+</body>
+
+</html>

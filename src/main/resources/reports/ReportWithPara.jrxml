@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.19.1.final using JasperReports Library version 6.19.1-867c00bf88cd4d784d404379d6c05e1b419e8a4c  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ReportWithPara" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="a5b9a684-ef6f-4649-a072-60170f298479">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="OracleSql.jrdax"/>
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<parameter name="address" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[select * from customers where address=$P{address}]]>
+	</queryString>
+	<field name="CUSTOMER_ID" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="CUSTOMER_ID"/>
+		<property name="com.jaspersoft.studio.field.label" value="CUSTOMER_ID"/>
+	</field>
+	<field name="NAME" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="NAME"/>
+		<property name="com.jaspersoft.studio.field.label" value="NAME"/>
+	</field>
+	<field name="ADDRESS" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="ADDRESS"/>
+		<property name="com.jaspersoft.studio.field.label" value="ADDRESS"/>
+	</field>
+	<field name="WEBSITE" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="WEBSITE"/>
+		<property name="com.jaspersoft.studio.field.label" value="WEBSITE"/>
+	</field>
+	<field name="CREDIT_LIMIT" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="CREDIT_LIMIT"/>
+		<property name="com.jaspersoft.studio.field.label" value="CREDIT_LIMIT"/>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="30" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="111" height="30" uuid="b62b6605-3bae-4933-9854-6358b5385897">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="14169336-ea55-4c32-83b0-97718bf52cf3"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[CUSTOMER_ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="111" y="0" width="111" height="30" uuid="3f94a76d-ddc0-4e38-9919-ed71b45ae5b5">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="6ce779f4-11f7-4f27-b547-7ad7ed9b1fce"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[NAME]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="222" y="0" width="111" height="30" uuid="3ed707dd-74d6-4867-8726-245f381c2dd5">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="5892e920-6dbb-42a4-b889-18aa7f455ec7"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[ADDRESS]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="333" y="0" width="111" height="30" uuid="30a0214d-0e40-4451-bab7-263234b3c134">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="73cf5c72-cf9a-4f1a-8272-6cb7cd0cf5ff"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[WEBSITE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="444" y="0" width="111" height="30" uuid="34ff9725-5755-4e01-a626-19c222a77c25">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="40ba975f-d50b-4336-9215-2072f5a98d2f"/>
+				</reportElement>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<text><![CDATA[CREDIT_LIMIT]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="30" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="111" height="30" uuid="5c5698c7-648c-4d08-9ebe-909a397862e8">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="14169336-ea55-4c32-83b0-97718bf52cf3"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{CUSTOMER_ID}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="111" y="0" width="111" height="30" uuid="c6cdd6c5-09c9-4da5-a345-439f4bdf9012">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="6ce779f4-11f7-4f27-b547-7ad7ed9b1fce"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{NAME}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="222" y="0" width="111" height="30" uuid="ae92c7d6-501a-4d13-b4d2-38ba3420a243">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="5892e920-6dbb-42a4-b889-18aa7f455ec7"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{ADDRESS}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="333" y="0" width="111" height="30" uuid="d0770d0d-25eb-465d-9cf8-2c4b850d70ad">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="73cf5c72-cf9a-4f1a-8272-6cb7cd0cf5ff"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{WEBSITE}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="444" y="0" width="111" height="30" uuid="9c9f57de-0e85-497f-9516-8398b8101c86">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="40ba975f-d50b-4336-9215-2072f5a98d2f"/>
+				</reportElement>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{CREDIT_LIMIT}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="5" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
